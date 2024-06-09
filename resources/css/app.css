@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom dark mode styles */
+.dark {
+    --tw-bg-opacity: 1;
+    background-color: rgba(26, 29, 25, var(--tw-bg-opacity));
+  }
+  
+  .dark .card {
+    background-color: rgba(26, 29, 25, var(--tw-bg-opacity));
+    border-color: rgba(26, 29, 25, var(--tw-bg-opacity));
+  }
+  
+  .dark .text-gray-100 {
+    color: rgba(243, 244, 246, var(--tw-text-opacity));
+  }
+  
+  .dark .border-gray-700 {
+    border-color: rgba(55, 65, 81, var(--tw-border-opacity));
+  }
