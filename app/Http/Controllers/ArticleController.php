@@ -6,6 +6,7 @@ use App\Models\Article;
 use App\Models\Image;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\ArticleStoreRequest;
+use App\Http\Requests\ArticleUpdateRequest;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
@@ -99,7 +100,7 @@ class ArticleController extends Controller
         return view('articles.editimage', compact('article'));
     }
 
-    public function addimage (Request $article, $id): RedirectResponse
+    public function addimage (Request $request, $id): RedirectResponse
     {
         $request->validate([
             'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
