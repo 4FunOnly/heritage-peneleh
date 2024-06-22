@@ -1,5 +1,7 @@
 @extends('layout')
 
+@section('title', 'Herritage Peneleh')
+
 @section('content')
 <main>
     <div class="position-relative vh-100 p-5 mb-4 rounded-3" style="background-image: url('{{ $article->uploadImage->first() ? asset($article->uploadImage->first()->url) : '' }}'); background-size: cover; background-position: center;">
@@ -10,8 +12,9 @@
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <div class="row">
+    <div class="container my-5">
         <div class="col">
+            <p class="fs-5 text-decoration-underline" style="color: orange"><a href="">Back to News List</a></p>
             <p class="lead">{{ $article->content }}</p>
         </div>
     </div>

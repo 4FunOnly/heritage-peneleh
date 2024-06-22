@@ -8,19 +8,18 @@ use App\Models\Article;
 use App\Models\Image;
 
 Route::get('/', function () {
-    return view('welcome');
-});
-Route::get('/home', function () {
     $articles = Article::latest()->paginate(9);
     return view('index', compact('articles'))
     ->with('i', (request()->input('page', 1) - 1) * 9);
-});
+})->name('home');;
 Route::get('/event', function () {
-    return view('news');
-});
-Route::get('/sponsor', function () {return view('sponsor');});
+    $articles = Article::latest()->paginate(9);
+    return view('news', compact('articles'))
+    ->with('i', (request()->input('page', 1) - 1) * 9);
+})->name('event');;
+Route::get('/sponsor', function () {return view('sponsor');})->name('sponsor');;
 Route::get('/view', function () {return view('show');});
-
+Route::get('/view-articles/{id}', [ArticleController::class, 'viewArticle'])->name('articles.view');
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');

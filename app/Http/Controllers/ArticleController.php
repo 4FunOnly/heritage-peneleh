@@ -71,6 +71,10 @@ class ArticleController extends Controller
     {
         return view('articles.show', compact('article'));
     }
+    public function viewArticle($id){
+        $article = Article::findOrFail($id);
+        return view('articles.show', compact('article'));
+    }
 
     /**
      * Show the form for editing the specified resource.
