@@ -39,7 +39,7 @@
                             zaman; Majapahit, Kolonial Belanda, dan Pergerakan Nasional Indonesia. Peneleh Herritage
                             menawarkan pengalaman wisata yang unik dan edukatif bagi para pengunjungnya. Di sini,
                             pengunujung dapat belajar tentang sejarah panjang Surabaya dan peran penting kawasan
-                            Peneleh dalam perjalanan bangsa Indonesia</p>
+                            Peneleh dalam perjalanan bangsa Indonesia </p>
                     </div>
                 </div>
             </div>
